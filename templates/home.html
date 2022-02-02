@@ -1,0 +1,29 @@
+{%extends "base.html" %}
+{%block content%}
+
+<h1>Data Mahasiswa</h1>
+   <table>
+     <thead>
+       <tr>
+           <th>NIM</th>
+           <th>Nama</th>
+           <th>Umur</th>
+           <th>Tempat Lahir</th>
+           <th>Jurusan</th>
+       </tr>
+       </thead>    
+       <tbody>
+        {% for row in data %}    
+               <tr>
+                   <td>{{row[0]}}</td>
+                   <td>{{row[1]}}</td>
+                   <td>{{row[2]}}</td>
+                   <td>{{row[3]}}</td>
+                   <td>{{row[4]}}</td>
+               </tr>
+        {% endfor %}
+       </tbody>
+   </table>
+   <br>
+   <a href="{{ url_for('insert') }}" class="button">Add more data!</a>
+{% endblock %}

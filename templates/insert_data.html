@@ -1,0 +1,16 @@
+{%extends "base.html" %}
+{%block content%}
+
+<h1>Masukkan data mahasiswa baru</h1>
+<form method="POST" action="/insert_data">
+    <!-- <center> -->
+    NIM <input type = "text" name= "nim" /> <br>
+    Nama <input type = "text" name = "nama" /> <br>
+    Umur <input type = "text" name = "umur" /> <br>
+    Tempat Lahir <input type = "text" name = "tempat_lahir" /> <br>
+    Jurusan <input type = "text" name = "jurusan" /> <br>
+    <input type = "submit">
+    <!-- </center> -->
+</form>
+   
+{% endblock %}
